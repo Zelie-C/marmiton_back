@@ -1,7 +1,7 @@
 POST http://localhost:3880/recipe/create/pate/jfeji/30/5
 
 ###
-GET http://localhost:3880/recipe/getallrecipe
+GET http://localhost:3880/recipe/getallrecipes
 
 ###
 DELETE http://localhost:3880/recipe/delete/1

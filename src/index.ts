@@ -81,7 +81,7 @@ app.delete('/recipe/delete/:id', async (req, res) => {
   res.send('deleted')
 })
 
-app.get('/recipe/getallrecipe', async (_, res) => {
+app.get('/recipe/getallrecipes', async (_, res) => {
   const allRecipes = await Recette.findAll();
   res.send(allRecipes)
 })
