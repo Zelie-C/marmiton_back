@@ -1,5 +1,6 @@
 import express from 'express'
 import 'dotenv/config'
+import sequelize from './sequelize'
 
 let app = express();
 const port = parseInt(process.env.PORT as string);
