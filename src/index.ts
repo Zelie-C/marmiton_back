@@ -83,6 +83,11 @@ app.post('/recipes', async (req: Request<IRequestBody>, res) => {
   res.json(maRecette)
 })
 
+app.get('/recipes', async (_, res) => {
+  const allRecipes = await Recette.findAll();
+  res.send(allRecipes)
+})
+
 app.delete('/recipes/:id', async (req, res) => {
   let idToDelete = req.params.id;
   await Recette.destroy({
@@ -93,10 +98,13 @@ app.delete('/recipes/:id', async (req, res) => {
   res.send('deleted')
 })
 
-app.get('/recipes', async (_, res) => {
-  const allRecipes = await Recette.findAll();
-  res.send(allRecipes)
-})
+// app.put('/recipes/:id', async (req, res) => {
+//   let entryToUpdate = req.params.id;
+//   await Recette.update({}, {
+    
+//   })
+//   res.send('updated')
+// })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
